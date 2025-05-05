@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import BrainLogo from '../components/BrainLogo';
 
 const Login = () => {
   const [identifier, setIdentifier] = useState('');
@@ -19,9 +20,12 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
-      <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
-        <h2 className="text-3xl font-bold mb-6 text-center text-indigo-700">Brain.AI Login</h2>
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
+      <BrainLogo size={96} />
+      <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md mt-6">
+        <h2 className="text-3xl font-bold mb-6 text-center text-indigo-700 flex items-center justify-center space-x-2">
+          <span>Brain.AI Login</span>
+        </h2>
         <form onSubmit={handleLogin}>
           <label className="block mb-2 font-semibold text-gray-700">Email or Phone Number</label>
           <input
